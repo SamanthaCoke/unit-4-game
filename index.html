@@ -1,12 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Crystal Collector</title>
+
+    <!--styles-->
+    <link rel="stylesheet" type="reset.css"
+    href="/assets/css/reset.css" <link rel="stylesheet"
+    type="style.css" href="/assets/css/style.css"
+  </head>
+  <body>
+    <header class="header"><h1>The Crystal Collector!</h1></header>
+    <main>
+      <div class="instructions">
+        <h2>Instructions:</h2>
+        <p>You will be given a random number at the start of this game.</p>
+        <p>
+          There are four crystals below: By clicking on a crystal, you will add
+          a specific number of points to your total score.
+        </p>
+        <p>
+          You win by matching your total score to the random number; you lose
+          the game if your score exceeds the random number.
+        </p>
+        <p>
+          Each crystal's value remains hidden until you click it.
+        </p>
+        <p>
+          Each crystal's value changes each time the game starts.
+        </p>
+      </div>
+
+      <div class="random-number" id="randNum"></div>
+
+      <div class="crystal-array" id="crysArray">
+        <button id="sapphire" <button id="amethyst" <button id="ruby" <button
+        id="emerald"
+      </div>
+
+      <div class="total-score">
+        <div>Your total score is:</div>
+        <br />
+        <div id="totScore">0</div>
+      </div>
+      <div class="wins-loses">
+        <p>Wins:</p>
+        <p id="wins">0</p>
+        <p>Losses:</p>
+        <p id="losses">0</p>
+      </div>
+    </main>
+    <scr type="text/javascript" src="./assets/javascript/"></script>
+  </body>
 </html>
