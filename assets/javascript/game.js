@@ -1,39 +1,43 @@
 $(document).ready(() => {
 
     //program generates a random number 19 and 120
-    let randNumber = Math.floor(Math.random() * ((120-19) +1) +19);
-    $('#randNum').html(randNumber);
+    var randNumber = Math.floor(Math.random() * ((120-19) +1) +19);
+    console.log("random number")
+    $('#randNum').text(randNumber);
 
     // each crystal has a hidden value: random number between one and tweleve
 
-    let sapphire = Math.floor(Math.random() * 12) + 1;
-    let amethyst = Math.floor(Math.random() * 12) + 1;
-    let ruby = Math.floor(Math.random() * 12) + 1;
-    let emerald = Math.floor(Math.random() * 12) + 1;
-}
-// player clicks the crystals to display value to totalScore
-let wins = 0;
-let losses = 0;
+    var sapphire = Math.floor(Math.random() * 12) + 1;
+    var amethyst = Math.floor(Math.random() * 12) + 1;
+    var ruby = Math.floor(Math.random() * 12) + 1;
+    var emerald = Math.floor(Math.random() * 12) + 1;
 
-let totalScore = 0;
+   console.log("s: ", sapphire)
+// player clicks the crystals to display value to totalScore
+var wins = 0;
+var losses = 0;
+
+var totalScore = 0;
 $('#totalScore').text(totalScore);
 
 function win() {
     wins = wins + 1;
-    $('#wins').text(losses);
+    $('#wins').text(wins);
     resetTwo();
     reset();
 }
 
 function lose() {
     losses = losses + 1;
-    $('#loses').text(lossses);
+    $('#losses').text(losses);
     resetTwo();
     reset();
 }
 
 $('#sapphire').click(() => {
+    console.log("clicked s", sapphire, totalScore)
     totalScore = totalScore + sapphire
+    console.log(totalScore)
     $('#totalScore').text(totalScore);
     if (totalScore === randNumber) {
         win();
@@ -87,6 +91,9 @@ $('#emerald').click(() => {
         resetTwo();
     }
 });
+
+
+
 // random number (crystals) get added all togther
 // the script determines if players win or loses - winsLosses
 //the page will not load, the game will restart
